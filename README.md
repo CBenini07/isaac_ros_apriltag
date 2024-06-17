@@ -1,3 +1,18 @@
+## How to Use
+Run in one terminal:
+```
+ros2 launch isaac_ros_apriltag isaac_ros_apriltag_usb_cam.launch.py camera_width:=1280 camera_height:=720
+```
+Run in a second terminal to visualize the TF:
+```
+rviz2 -d $(ros2 pkg prefix isaac_ros_apriltag --share)/rviz/usb_cam.rviz
+```
+Run in a third terminal to visualize the message array of data:
+```
+echo /tag_detections
+```
+---
+
 # Isaac ROS AprilTag
 
 NVIDIA-accelerated AprilTag detection and pose estimation.
